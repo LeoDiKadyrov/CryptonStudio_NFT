@@ -11,15 +11,24 @@ contract KadyrovERC721 is ERC721, ERC721URIStorage, AccessControl {
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
     
-    string private _baseTokenUri;
+    // string private _baseTokenUri;
     bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");
 
-    constructor(string memory name, string memory symbol) ERC721(name, symbol) {
+    constructor() ERC721("Monke1", "MNK1") {
         _setupRole(DEFAULT_ADMIN_ROLE, _msgSender());
         _setupRole(MINTER_ROLE, _msgSender());
         uint256 newItemId = _tokenIds.current();
         _safeMint(_msgSender(), newItemId);
+        // _baseTokenUri = "";
     } 
+
+    // function _baseURI() internal view virtual override returns (string memory) {
+    //     return _baseTokenUri;
+    // }
+
+    // function setBaseTokenURI(string memory baseTokenUri) public onlyRole(DEFAULT_ADMIN_ROLE) {
+    //     _baseTokenUri = baseTokenUri;
+    // }
 
     function safeMint(address to, uint256 tokenId, string memory uri)
         public

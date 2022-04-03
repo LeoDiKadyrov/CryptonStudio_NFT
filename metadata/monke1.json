@@ -1,0 +1,19 @@
+{
+    "name": "Biba",
+    "description": "Why",
+    "image": "ipfs://QmSqHPYASNanKWmGYJYzMVBpmcvhjQ4KVKrGxkX75ZpoG8",
+      "attributes": [
+      {
+        "trait_type": "Mood", 
+        "value": "impressed"
+      }, 
+      {
+        "trait_type": "Age", 
+        "value": "10 000 years"
+      }, 
+      {
+        "trait_type": "Power", 
+        "value": 999
+      }
+    ]
+}
