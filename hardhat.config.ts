@@ -7,6 +7,7 @@ import "@typechain/hardhat";
 import "hardhat-gas-reporter";
 import "solidity-coverage";
 import "./tasks/ERC721mint";
+import "./tasks/ERC1155mint";
 
 dotenv.config();
 
